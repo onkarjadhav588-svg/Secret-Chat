@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecretChat</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login" id="loginPage">
+    <h1>🔒 SecretChat</h1>
+    <p class="subtitle">A private chat for Onkar & Urmila</p>
+
+    <select id="username">
+        <option value="Onkar">Onkar</option>
+        <option value="Urmila">Urmila</option>
+    </select>
+
+    <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+
+    <div id="authError" class="error-text"></div>
+
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn" class="secondary-btn">First Time? Create Account</button>
+</div>
+
+<div class="chat" id="chatPage" style="display:none;">
+
+    <div class="top">
+        <div class="avatar" id="peerAvatar"></div>
+        <div class="top-left">
+            <h2 id="roomName">Secret Chat</h2>
+            <span id="onlineStatus" class="online-status">connecting...</span>
+        </div>
+        <button id="logoutBtn" class="logout-btn">⏻</button>
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <div id="typingIndicator" class="typing-indicator">&nbsp;</div>
+
+    <div id="emojiPanel" class="emoji-panel"></div>
+
+    <div class="bottom">
+        <button id="emojiBtn" class="icon-btn" title="Emoji">😊</button>
+
+        <label for="imageInput" class="icon-btn" title="Send Image">📷</label>
+        <input type="file" id="imageInput" accept="image/*" style="display:none;">
+
+        <input type="text" id="msg" placeholder="Type message...">
+        <button id="sendBtn">➤</button>
+    </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
